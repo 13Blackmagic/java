@@ -8,7 +8,26 @@ var passwordLength = prompt("How many characters would you like your password to
 var passwordLength = parseInt(passwordLength);
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+
+function generate () {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+if (passwordLength < 8 || passwordLength > 128) {
+  alert("Password must be between 8 and 128 characters");
+  return;
+}
+var numbers = confirm("Would you like to include numbers?");
+var specialCharacters = confirm("Would you like to include special characters?");
+var lowerCase = confirm("Would you like to include lowercase letters?");
+var upperCase = confirm("Would you like to include uppercase letters?");
+if (numbers === false && specialCharacters === false && lowerCase === false && upperCase === false) {
+  alert("You must select at least one character type");
+  return;
+}
 function generatePassword() {
   var response = prompt("How many characters would you like your password to be? (8-128)");
   var password = generatePassword();
@@ -18,5 +37,7 @@ function generatePassword() {
 
 }
 
-// Add event listener to generate button
+do {
+  // Add event listener to generate button
+} while (condition);
 generateBtn.addEventListener("click", writePassword);
