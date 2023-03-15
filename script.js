@@ -8,6 +8,32 @@ var passwordtext= document.querySelector("#password");
 
 addEventListener("click"), function() {
 }
+if (passwordLength < 8 || passwordLength > 128) {
+  alert("Password must be between 8 and 128 characters");
+//
+}
+if (numbers === false && specialCharacters === false && lowerCase === false && upperCase === false) {
+  alert("You must select at least one character type");
+ //
+}
+if (numbers === true) {
+  password = password.concat(numbers);
+}
+if (specialCharacters === true) {
+  password = password.concat(specialCharacters);
+}
+if (lowerCase === true) {
+  password = password.concat(lowerCase);
+}
+if (upperCase === true) {
+  password = password.concat(upperCase);
+}
+for (var i = 0; i < passwordLength; i++) {
+  var random = Math.floor(Math.random() * password.length);
+  passwordText += password[random];
+}
+
+
 
 
 function generatePassword() {
@@ -20,14 +46,14 @@ function generatePassword() {
   return arguments;
 }
 
+// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
-
 }
+
+
 
 // Assignment Code
   // Add event listener to generate button
