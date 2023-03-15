@@ -29,9 +29,9 @@ go and click on generate button and click on the questions it asks and you will 
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+    
+    ![password genertor  screen  shot](./assets/images/app-thumbnail.PNG)
+
 
 ## Credits
 
